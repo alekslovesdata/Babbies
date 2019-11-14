@@ -89,7 +89,8 @@ for j in range(10):
         # hyper inefficient loop time!
         for i in range(10000):
             allowable_names = working_session.query(Name).filter(Name.Percent <= allowable_percentage,
-                                                                 Name.Year == target_year)
+                                                                 Name.Year == target_year,
+                                                                 Name.Sex == sex)
             skip = random.randint(0, allowable_names.count()-1)
 
             possible_name = allowable_names[skip].Name.lower()
