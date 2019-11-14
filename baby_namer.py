@@ -138,11 +138,6 @@ for j in range(10):
                 if first_name[-2:] == possible_name[-2:]:
                     fail = True
 
-                # This locks the middle name's syllable count to be less than or equal to the first name
-                # another attempt at preventing awkward sounding names
-                if syllables(first_name) <= syllable_count:
-                    fail = True
-
             # if we've made it through all of those weird checks - we just need to make sure the syllable count
             # is within range if it is, we've found a name!
             if fail is False:
