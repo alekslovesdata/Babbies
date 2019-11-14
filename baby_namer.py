@@ -60,7 +60,7 @@ no_names = ['fill', 'this', 'list', 'with', 'unacceptable', 'name']
 
 # if you want a less common name lower the allowable percentage
 # if you don't care set the allowable percentage to 1
-allowable_percentage = 0.005
+allowable_percentage = 1
 
 # the sex of the name per the social security listing
 # possible options are 'boy' and 'girl'
@@ -90,7 +90,7 @@ for j in range(10):
         for i in range(10000):
             allowable_names = working_session.query(Name).filter(Name.Percent <= allowable_percentage,
                                                                  Name.Year == target_year)
-            skip = random.randint(0, len(allowable_names)-1)
+            skip = random.randint(0, allowable_names.count()-1)
 
             possible_name = allowable_names[skip].Name.lower()
 
