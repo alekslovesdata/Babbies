@@ -5,10 +5,10 @@ import random
 
 '''
 Hi! This is a pretty lazily written script that will generate a first and middle name based on some values you can
-configure within the code. There's comments above most lines explaining what they do. 
+configure within the code. There's comments above most lines explaining what they do.
 
 This was written on Python 3.6 but should be 3.x compatible (probably 2.x also)
-You'll need to have SQLAlchemy 
+You'll need to have SQLAlchemy
 
 Names were taken from here: https://github.com/hadley/data-baby-names
 They were then converted to the baby_names_database.db for easy querying with SQLAlchemy
@@ -64,7 +64,7 @@ allowable_percentage = 1
 
 # the sex of the name per the social security listing
 # possible options are 'boy' and 'girl'
-sex = 'boy'
+sex = 'girl'
 
 # generate 10 names! Change the 10 to something else if you want more or less
 for j in range(10):

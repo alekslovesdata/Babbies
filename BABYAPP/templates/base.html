@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Baby Names! - {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+  </head>
+
+  <body>
+    <h1> Baby Names! </h1>
+    <p> Welcome to the baby name generator. Fill out the form below to proceed, with multiple words separated by commas.</p>
+    <img src="/static/baby.jpg" style="width:500px;height:350px;">
+
+  <article class="flex two" style="padding: 3em 1em;">
+    {% block content %}
+    <form action="/generator" method="post">
+      <input type="text" name="form1" placeholder="Unacceptable Names e.g. Anna, Katie, Elizabeth">
+      <input type="text" name="form2" placeholder="Unacceptable Letter or Letter Combo e.g. z, ss, ak">
+      <input type="text" name="form3" placeholder="Unacceptable Last Letters e.g. ch, na">
+      <input type="text" name="form4" placeholder="girl or boy (No Other Options Available Because Data Comes from SSA)">
+      <input type="text" name="form5" placeholder="Last Name (Optional)">
+      <p> Please move the bar depending on the name uniqueness you want (farther right is more unique) </p>
+      <input type="range" name="form6" placeholder="Uniqueness from 0-1">
+      <input type="submit" name="button_1" value="Generate 10 Names">
+    </form>
+    {% endblock %}
+  </article>
+  </body>
+</html>
